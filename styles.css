@@ -140,3 +140,56 @@ body {
         font-size: 18px;
     }
 }
+
+/* Styles specific to the data upload page */
+.page-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.page-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    padding: 15px 30px; /* Increased padding */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Larger font size */
+    margin: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004080;
+}
+
+button[onclick="window.location.href='MenuPrincipal.html'"] {
+    background-color: #6c757d;
+}
+
+button[onclick="window.location.href='MenuPrincipal.html'"]:hover {
+    background-color: #5a6268;
+}
+
+button[onclick="window.location.href='MenuPrincipal.html'"]:active {
+    background-color: #4e555b;
+}

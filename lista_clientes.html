@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -91,6 +93,7 @@
                         <p>Teléfono: ${cliente[9]}</p>
                         <p id="gestion-${index}">Gestion: ${cliente[10]}</p>
                         <p id="estado-${index}">Estado: ${cliente[12]}</p>
+                        <p id="Abono-${index}">Abono: ${cliente[13]}</p>
                         <input type="number" id="recaudo-${index}" placeholder="Monto de Recaudo" />
                         <input type="date" id="fecha-${index}" />
                         <button onclick="realizarRecaudo(${index}, ${cliente[6]})">Recaudar Dinero</button>
@@ -143,6 +146,7 @@
                 document.getElementById(`saldo-${index}`).innerText = formatCurrency(nuevoSaldo);
                 clientes[index][6] = nuevoSaldo;
                 clientes[index][12] = 'ABONADO';
+                clientes[index][13] = montoRecaudo;
                 document.getElementById(`estado-${index}`).innerText = `Estado: ABONADO`;
                 localStorage.setItem('clientes', JSON.stringify(clientes));
 

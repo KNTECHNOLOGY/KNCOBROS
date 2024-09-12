@@ -42,6 +42,7 @@
 
                 alert('Archivo subido con éxito');
                 localStorage.setItem('clientes', JSON.stringify(clientes));
+                window.location.href = 'MenuPrincipal.html';
             };
             reader.readAsArrayBuffer(file);
         }
@@ -69,6 +70,7 @@
                 // Eliminar los datos de lista_recaudos
                 localStorage.removeItem('recaudos');
                 alert('Cierre realizado con exito!');
+                window.location.href = 'MenuPrincipal.html';
             }
         }
 
@@ -83,8 +85,9 @@
             const wb = XLSX.utils.book_new();
             const ws = XLSX.utils.aoa_to_sheet(clientes);
             XLSX.utils.book_append_sheet(wb, ws, 'Clientes');
-            XLSX.writeFile(wb, 'Reporte_Clientes.xlsx', { bookType: 'xlsx', type: 'array' });
+            XLSX.writeFile(wb, 'Avance.xlsx', { bookType: 'xlsx', type: 'array' });
             alert('Reporte descargado con éxito');
+            window.location.href = 'MenuPrincipal.html';
         }
     </script>
 </body>
